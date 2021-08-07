@@ -23,9 +23,9 @@ function sendMail(){
   
   if(isNonValid(nam)&&isNonValid(maile)&&isNonValid(message)){
    if(!emailIsValid(maile)){
-	toastheader.innerText="valider l'email";
+	toastheader.innerText="Enter a valide email";
 	toastheader.style.color = "#ff0000";
-	toastbody.innerText="s'il vous plaît!";
+	toastbody.innerText="please!";
 	toastbody.style.color = "#ff0000";
 	
 	
@@ -39,10 +39,10 @@ function sendMail(){
 		reply_to: maile.value,
 		})
 	  .then(function(res){
-		alert("Envoyer!");
-		toastheader.innerText="Envoyer!";
+		alert(" EMAIL SENT !");
+		toastheader.innerText="EMAIL SENT!";
 		toastheader.style.color = "#00ff00";
-		toastbody.innerText="Merci Pour Votre Message";
+		toastbody.innerText="thank you for your message";
 		toastbody.style.color = "#00ff00";
 	  });
 	  EmptyThem(nam,maile,message,subject);
@@ -52,7 +52,7 @@ function sendMail(){
   }else{
 	toastheader.innerText="Error";
 	toastheader.style.color = "#ff0000";
-	toastbody.innerText="Romplie Les Donner";
+	toastbody.innerText="Fill in all the fields";
 	toastbody.style.color = "#ff0000";
   }}/** **/
   /** **/
